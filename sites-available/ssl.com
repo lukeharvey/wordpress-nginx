@@ -7,7 +7,7 @@ server {
 	server_name ssl.com;
 
 	# Path to document root
-	root /sites/ssl.com/public;
+	root /var/www/ssl.com/htdocs;
 
 	# Paths to certificate files.
 	ssl_certificate /etc/ssl/ssl.com.crt;
@@ -17,8 +17,8 @@ server {
 	index index.php;
 
 	# Overrides logs defined in nginx.conf, allows per site logs.
-	access_log /sites/ssl.com/logs/access.log;
-	error_log /sites/ssl.com/logs/error.log;
+	access_log /var/www/ssl.com/logs/access.log;
+	error_log /var/www/ssl.com/logs/error.log;
 
 	# Default server block rules
 	include global/server/defaults.conf;
